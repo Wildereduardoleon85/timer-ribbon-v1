@@ -10,7 +10,7 @@ function TimerApp() {
 
   const getTime = async () => {
     const res = await fetch(
-      'http://worldtimeapi.org/api/timezone/America/Santiago'
+      'https://worldtimeapi.org/api/timezone/America/Santiago'
     )
     const data = await res.json()
     return data
