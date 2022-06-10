@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import TimerApp from './TimerApp'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TimerApp />
   </React.StrictMode>,
   document.getElementById('root')
 )

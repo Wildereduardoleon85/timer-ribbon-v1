@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react'
-import './App.css'
+import './TimerApp.css'
 
-function TimerRibbonContainer() {
+function TimerApp() {
   /**
    * Duration in milliseconds of the custom catalog session
    */
@@ -92,4 +92,4 @@ function TimerRibbonContainer() {
   )
 }
 
-export default TimerRibbonContainer
+export default TimerApp
