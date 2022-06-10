@@ -16,8 +16,9 @@ function TimerApp() {
     return data
   }
 
-  const expirationTimeFromLocalStorage =
+  const expirationTimeFromLocalStorage = JSON.parse(
     localStorage.getItem('sessionTimeStamp')
+  )
 
   const getTimeStamp = () => {
     getTime().then(({ unixtime }) => {
@@ -29,7 +30,7 @@ function TimerApp() {
        * Check local storage, and add timestamp if needed
        */
       if (!expirationTimeFromLocalStorage) {
-        localStorage.setItem('sessionTimeStamp', expirationTime)
+        localStorage.setItem('sessionTimeStamp', JSON.stringify(expirationTime))
         setRemainingTime(expirationTime - unixtime * 1000)
       } else {
         setRemainingTime(expirationTimeFromLocalStorage - unixtime * 1000)
